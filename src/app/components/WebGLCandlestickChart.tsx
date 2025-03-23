@@ -189,38 +189,38 @@ const WebGLCandlestickChart = () => {
   };
 
   // Function to set stop loss for an order
-  const setOrderStopLoss = (orderId: string) => {
-    if (!stopLossPrice) return;
+  // const setOrderStopLoss = (orderId: string) => {
+  //   if (!stopLossPrice) return;
 
-    const stopLossValue = parseFloat(stopLossPrice);
-    if (isNaN(stopLossValue)) return;
+  //   const stopLossValue = parseFloat(stopLossPrice);
+  //   if (isNaN(stopLossValue)) return;
 
-    setOrders((prevOrders) =>
-      prevOrders.map((order) =>
-        order.id === orderId ? { ...order, stopLoss: stopLossValue } : order
-      )
-    );
+  //   setOrders((prevOrders) =>
+  //     prevOrders.map((order) =>
+  //       order.id === orderId ? { ...order, stopLoss: stopLossValue } : order
+  //     )
+  //   );
 
-    setStopLossPrice("");
-    setSelectedOrderId(null);
-  };
+  //   setStopLossPrice("");
+  //   setSelectedOrderId(null);
+  // };
 
   // Function to set take profit for an order
-  const setOrderTakeProfit = (orderId: string) => {
-    if (!takeProfitPrice) return;
+  // const setOrderTakeProfit = (orderId: string) => {
+  //   if (!takeProfitPrice) return;
 
-    const takeProfitValue = parseFloat(takeProfitPrice);
-    if (isNaN(takeProfitValue)) return;
+  //   const takeProfitValue = parseFloat(takeProfitPrice);
+  //   if (isNaN(takeProfitValue)) return;
 
-    setOrders((prevOrders) =>
-      prevOrders.map((order) =>
-        order.id === orderId ? { ...order, takeProfit: takeProfitValue } : order
-      )
-    );
+  //   setOrders((prevOrders) =>
+  //     prevOrders.map((order) =>
+  //       order.id === orderId ? { ...order, takeProfit: takeProfitValue } : order
+  //     )
+  //   );
 
-    setTakeProfitPrice("");
-    setSelectedOrderId(null);
-  };
+  //   setTakeProfitPrice("");
+  //   setSelectedOrderId(null);
+  // };
   // Function to close an order
   const closeOrder = (orderId: string) => {
     if (latestPrice === null) return;
