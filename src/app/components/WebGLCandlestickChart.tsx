@@ -6,19 +6,7 @@ import axios from "axios";
 import ChartHeader from "./ChartHeader";
 import OrderManagement from "./OrderManagement";
 
-// List of all MT4 time frames
-const timeFrames = [
-  "1m",
-  "5m",
-  "15m",
-  "30m",
-  "1h",
-  "4h",
-  "1d",
-  "1w",
-  "1M",
-] as const;
-type TimeFrame = (typeof timeFrames)[number];
+type TimeFrame = "1m" | "5m" | "15m" | "30m" | "1h" | "4h" | "1d" | "1w" | "1M";
 
 type CandlestickData = { x: number; y: [number, number, number, number] }; // [open, high, low, close]
 
@@ -44,6 +32,7 @@ const WebGLCandlestickChart = () => {
   const glRef = useRef<WebGLRenderingContext | null>(null);
   const programRef = useRef<WebGLProgram | null>(null);
   const wsRef = useRef<WebSocket | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
   const [stopLossPrice, setStopLossPrice] = useState<string>("");
   const [takeProfitPrice, setTakeProfitPrice] = useState<string>("");
