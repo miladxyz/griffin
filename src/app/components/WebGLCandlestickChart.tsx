@@ -34,8 +34,8 @@ const WebGLCandlestickChart = () => {
   const wsRef = useRef<WebSocket | null>(null);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
-  const [stopLossPrice, setStopLossPrice] = useState<string>("");
-  const [takeProfitPrice, setTakeProfitPrice] = useState<string>("");
+  // const [stopLossPrice, setStopLossPrice] = useState<string>("");
+  // const [takeProfitPrice, setTakeProfitPrice] = useState<string>("");
   const [orderSectionHeight, setOrderSectionHeight] = useState(
     window.innerHeight * 0.4
   );
