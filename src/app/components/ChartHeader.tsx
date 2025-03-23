@@ -27,9 +27,9 @@ interface ChartHeaderProps {
 }
 
 const ChartHeader = ({
-  timeFrame,
+  // timeFrame,
   setTimeFrame,
-  quantity,
+  // quantity,
   setQuantity,
   balance,
   profitLoss,
